@@ -20,6 +20,6 @@ InFormMixin = Mixin.create
 
     model: (->
         @get('form.model')
-    ).property('form')
+    ).property('form', 'form.model')
 
 `export default InFormMixin`
