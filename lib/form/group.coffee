@@ -32,6 +32,9 @@ FormGroupComponent = Component.extend(InFormMixin, HasPropertyMixin, HasProperty
     classNameBindings: ['class', 'hasSuccess', 'hasWarning', 'hasError', 'v_icons:has-feedback']
     attributeBindings: ['disabled']
     canShowErrors: false
+    canShowErrorsObserver: (-> {
+        this.set('canShowErrors', false);
+    }).observes('form', 'form.model')
 
 
     hasSuccess: (-> 
